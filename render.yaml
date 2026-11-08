@@ -22,7 +22,7 @@ services:
     branch: main
     autoDeploy: true
     buildCommand: "pip install -r requirements.txt && pytest -q"
-    startCommand: "python server.py"
+    startCommand: "gunicorn api.app:app"
     healthCheckPath: /healthz
     envVars:
       - fromGroup: skyroute-settings

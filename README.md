@@ -41,7 +41,7 @@ Exit codes: `0` ok, `1` input missing, `2` quality gate failed (more than 10% re
    ```
 2. In Render: **New → Blueprint** → connect GitHub → choose the repo → **Apply**.
    `render.yaml` creates:
-   - `skyroute-pipeline-dashboard` – free web service. Build runs `pytest`; start runs `python server.py`,
+   - `skyroute-pipeline-dashboard` – free web service. Build runs `pytest`; start runs `gunicorn api.app:app` (Flask app in `api/app.py`),
      which runs the pipeline once and serves the dashboard at `https://<name>.onrender.com`.
    - `skyroute-orders-pipeline` – cron job, every day 02:00 UTC (paid service type; delete that block
      in `render.yaml` first if you have no payment method on Render).
