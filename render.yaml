@@ -1,0 +1,20 @@
+# Render Blueprint - scheduled deployment (Cron Job).
+# Render cron schedules use UTC. Each push to main triggers a new build;
+# earlier builds stay in the Events/Deploys history for rollback.
+services:
+  - type: cron
+    name: skyroute-orders-pipeline
+    runtime: python
+    branch: main
+    schedule: "0 2 * * *"          # every day at 02:00 UTC
+    buildCommand: "pip install -r requirements.txt && pytest -q"
+    startCommand: "python src/pipeline.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: SKYROUTE_WORKERS
+        value: "4"
+      - key: SKYROUTE_MAX_REJECT_RATE
+        value: "0.10"
+      - key: SKYROUTE_TRIGGER
+        value: "render-cron"

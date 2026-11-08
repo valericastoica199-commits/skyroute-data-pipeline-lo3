@@ -1,0 +1,35 @@
+name: pipeline-ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Unit tests (merge is blocked if these fail)
+        run: pytest -v
+
+      - name: Smoke run of the pipeline
+        run: python src/pipeline.py --workers 4
+
+      - name: Keep run evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-run-${{ github.sha }}
+          path: |
+            output/run_summary.json
+            output/rejected_orders.csv
+            logs/pipeline.log
