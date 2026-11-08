@@ -1,0 +1,234 @@
+order_id,order_date,region,depot,carrier,status,order_value,items,weight_kg,value_per_item,promised_days,actual_days,on_time
+SR10001,2026-09-15,North,Leeds,SwiftHaul,Delivered,105.71,12,59.0,8.81,3,3,yes
+SR10002,2026-09-06,North,Leeds,SkyRoute Fleet,Delayed,462.24,7,3.9,66.03,1,2,no
+SR10003,2026-09-15,South,Brighton,SwiftHaul,Processing,261.20,11,62.7,23.75,5,,
+SR10004,2026-09-18,South,Southampton,SkyRoute Fleet,Processing,862.13,7,17.2,123.16,3,,
+SR10005,2026-10-25,North,Newcastle,SwiftHaul,In Transit,249.10,2,1.3,124.55,3,,
+SR10006,2026-10-06,West,Cardiff,SwiftHaul,Delayed,562.39,2,11.3,281.19,5,6,no
+SR10007,2026-10-13,South,Southampton,ParcelLink,Processing,886.92,2,11.2,443.46,1,,
+SR10008,2026-10-11,North,Newcastle,SkyRoute Fleet,In Transit,342.61,5,8.4,68.52,5,,
+SR10009,2026-10-09,East,Norwich,SwiftHaul,Processing,660.28,11,15.4,60.03,1,,
+SR10010,2026-09-21,West,Bristol,SkyRoute Fleet,Delivered,742.30,11,58.4,67.48,2,4,no
+SR10011,2026-10-27,West,Cardiff,SkyRoute Fleet,Delivered,595.06,2,5.6,297.53,2,3,no
+SR10012,2026-10-18,West,Cardiff,SwiftHaul,Delivered,532.36,5,29.4,106.47,2,2,yes
+SR10013,2026-10-02,West,Bristol,SkyRoute Fleet,Delivered,777.08,4,5.3,194.27,2,3,no
+SR10014,2026-09-25,South,Brighton,SwiftHaul,Processing,896.57,7,25.4,128.08,1,,
+SR10015,2026-10-14,North,Newcastle,SwiftHaul,Processing,316.06,12,26.3,26.34,1,,
+SR10016,2026-10-03,South,Southampton,SwiftHaul,In Transit,822.68,1,5.7,822.68,3,,
+SR10017,2026-09-10,East,Cambridge,SkyRoute Fleet,Processing,492.35,9,46.3,54.71,2,,
+SR10019,2026-10-19,North,Leeds,SkyRoute Fleet,Delivered,598.88,12,74.1,49.91,5,4,yes
+SR10020,2026-10-30,South,Southampton,SwiftHaul,Delivered,290.87,9,58.2,32.32,5,5,yes
+SR10021,2026-09-08,East,Norwich,SkyRoute Fleet,In Transit,71.66,9,4.8,7.96,5,,
+SR10022,2026-10-16,South,Southampton,SkyRoute Fleet,Delayed,74.65,4,2.4,18.66,1,2,no
+SR10023,2026-10-13,East,Cambridge,SkyRoute Fleet,Delivered,492.22,9,43.3,54.69,2,2,yes
+SR10024,2026-09-07,West,Bristol,SwiftHaul,Delivered,396.48,8,23.9,49.56,5,5,yes
+SR10025,2026-09-04,West,Cardiff,SwiftHaul,Processing,315.28,1,5.7,315.28,1,,
+SR10026,2026-09-28,South,Southampton,ParcelLink,Delivered,424.43,4,22.9,106.11,5,5,yes
+SR10027,2026-09-04,North,Leeds,SkyRoute Fleet,In Transit,834.83,9,50.2,92.76,1,,
+SR10028,2026-09-14,South,Brighton,SkyRoute Fleet,In Transit,160.70,8,3.3,20.09,5,,
+SR10029,2026-10-15,West,Cardiff,SkyRoute Fleet,Delivered,183.06,8,13.8,22.88,3,3,yes
+SR10030,2026-09-04,North,Leeds,SwiftHaul,Delayed,436.96,12,72.1,36.41,1,4,no
+SR10031,2026-09-05,South,Southampton,SwiftHaul,Delivered,777.71,9,25.8,86.41,1,1,yes
+SR10032,2026-09-27,South,Brighton,ParcelLink,Delayed,195.77,10,47.7,19.58,1,2,no
+SR10033,2026-10-12,South,Brighton,ParcelLink,Delivered,294.82,7,34.9,42.12,2,4,no
+SR10034,2026-10-05,North,Leeds,SwiftHaul,Delivered,249.70,8,48.7,31.21,1,1,yes
+SR10035,2026-09-29,North,Newcastle,SwiftHaul,Delivered,885.71,6,31.9,147.62,3,3,yes
+SR10036,2026-10-30,North,Leeds,SkyRoute Fleet,Processing,249.05,9,52.4,27.67,3,,
+SR10037,2026-09-22,South,Southampton,SwiftHaul,Delivered,576.30,5,10.1,115.26,2,4,no
+SR10038,2026-09-28,West,Cardiff,SkyRoute Fleet,Delivered,18.14,1,5.1,18.14,1,3,no
+SR10039,2026-10-16,East,Cambridge,SwiftHaul,Delivered,23.56,12,10.3,1.96,5,6,no
+SR10040,2026-09-28,South,Southampton,SkyRoute Fleet,Delayed,287.81,1,5.9,287.81,3,5,no
+SR10041,2026-09-07,North,Newcastle,SwiftHaul,Delivered,797.46,4,11.5,199.37,2,4,no
+SR10042,2026-09-02,South,Southampton,SwiftHaul,Delivered,833.17,3,15.5,277.72,2,2,yes
+SR10044,2026-09-20,West,Bristol,SkyRoute Fleet,Delivered,35.94,4,6.3,8.98,5,5,yes
+SR10045,2026-10-12,East,Cambridge,SwiftHaul,Delivered,883.32,2,7.3,441.66,3,3,yes
+SR10046,2026-09-17,North,Leeds,SkyRoute Fleet,Delivered,542.97,5,12.5,108.59,2,3,no
+SR10047,2026-09-25,East,Norwich,ParcelLink,In Transit,54.28,10,30.6,5.43,1,,
+SR10048,2026-10-29,South,Brighton,SwiftHaul,Delivered,292.82,7,39.0,41.83,1,3,no
+SR10049,2026-09-26,East,Cambridge,SwiftHaul,Delayed,127.65,5,14.8,25.53,5,8,no
+SR10050,2026-10-10,West,Cardiff,ParcelLink,Processing,499.92,12,4.8,41.66,2,,
+SR10051,2026-09-29,East,Cambridge,SwiftHaul,Delivered,204.13,7,23.0,29.16,3,3,yes
+SR10052,2026-10-03,South,Brighton,SkyRoute Fleet,Processing,739.30,2,10.0,369.65,3,,
+SR10053,2026-09-03,East,Norwich,ParcelLink,Delivered,555.98,4,20.4,139.00,2,1,yes
+SR10054,2026-10-16,West,Cardiff,ParcelLink,In Transit,368.69,11,14.3,33.52,2,,
+SR10055,2026-10-22,North,Newcastle,SkyRoute Fleet,Delivered,508.30,7,42.0,72.61,2,2,yes
+SR10056,2026-10-13,North,Newcastle,ParcelLink,In Transit,557.20,3,14.4,185.73,5,,
+SR10057,2026-09-29,West,Cardiff,SkyRoute Fleet,Delayed,758.28,8,16.7,94.78,2,6,no
+SR10058,2026-09-29,West,Bristol,SwiftHaul,Processing,267.87,4,8.2,66.97,3,,
+SR10059,2026-09-15,East,Cambridge,SwiftHaul,Delayed,150.23,2,3.4,75.11,2,4,no
+SR10060,2026-09-27,West,Bristol,SkyRoute Fleet,In Transit,752.11,6,16.7,125.35,5,,
+SR10061,2026-10-31,North,Newcastle,ParcelLink,Delayed,681.83,7,39.2,97.40,5,6,no
+SR10062,2026-09-15,West,Cardiff,ParcelLink,Delayed,444.79,12,33.3,37.07,2,6,no
+SR10063,2026-10-29,West,Bristol,SwiftHaul,Processing,487.70,3,17.8,162.57,5,,
+SR10065,2026-10-19,South,Brighton,ParcelLink,In Transit,680.53,6,32.8,113.42,3,,
+SR10066,2026-10-05,East,Norwich,ParcelLink,Delivered,213.44,8,6.5,26.68,1,3,no
+SR10067,2026-10-10,North,Leeds,SkyRoute Fleet,Delivered,126.71,4,17.9,31.68,2,1,yes
+SR10068,2026-10-20,South,Brighton,SkyRoute Fleet,In Transit,551.22,12,75.3,45.94,3,,
+SR10069,2026-09-02,North,Newcastle,SwiftHaul,Delivered,614.45,5,31.2,122.89,1,2,no
+SR10070,2026-10-08,West,Bristol,SkyRoute Fleet,Processing,632.02,4,9.0,158.00,1,,
+SR10071,2026-10-13,North,Newcastle,SkyRoute Fleet,Delayed,462.78,1,2.5,462.78,3,7,no
+SR10072,2026-09-24,West,Cardiff,SwiftHaul,In Transit,150.40,2,2.9,75.20,5,,
+SR10073,2026-09-28,East,Cambridge,ParcelLink,Delayed,768.77,9,49.2,85.42,5,9,no
+SR10074,2026-10-07,North,Newcastle,ParcelLink,Delivered,40.40,8,44.7,5.05,2,2,yes
+SR10075,2026-10-22,South,Brighton,ParcelLink,In Transit,262.50,4,16.1,65.62,3,,
+SR10076,2026-09-16,East,Cambridge,ParcelLink,Delayed,506.33,1,1.9,506.33,2,3,no
+SR10077,2026-09-29,West,Bristol,SkyRoute Fleet,Processing,275.40,12,34.4,22.95,5,,
+SR10078,2026-10-06,South,Brighton,ParcelLink,Delivered,897.02,11,41.3,81.55,3,3,yes
+SR10079,2026-09-20,East,Cambridge,SkyRoute Fleet,Processing,121.78,8,12.6,15.22,3,,
+SR10080,2026-09-13,North,Leeds,SwiftHaul,Processing,443.52,9,43.4,49.28,2,,
+SR10081,2026-09-24,East,Norwich,ParcelLink,Delivered,27.52,4,14.6,6.88,3,3,yes
+SR10082,2026-10-31,East,Norwich,SwiftHaul,Delivered,783.59,1,3.4,783.59,3,5,no
+SR10083,2026-09-29,North,Newcastle,SkyRoute Fleet,Delayed,869.47,5,9.7,173.89,5,9,no
+SR10084,2026-09-05,West,Bristol,SkyRoute Fleet,Delivered,147.04,2,7.7,73.52,5,5,yes
+SR10085,2026-10-19,East,Cambridge,SwiftHaul,Delivered,542.57,4,16.7,135.64,1,2,no
+SR10086,2026-10-26,West,Cardiff,ParcelLink,In Transit,518.24,8,6.1,64.78,3,,
+SR10087,2026-10-13,North,Leeds,SkyRoute Fleet,Delivered,227.28,11,41.4,20.66,2,2,yes
+SR10088,2026-10-09,South,Brighton,ParcelLink,Delivered,43.89,7,15.1,6.27,5,7,no
+SR10090,2026-10-12,South,Southampton,ParcelLink,In Transit,746.57,2,1.7,373.29,2,,
+SR10091,2026-09-08,South,Brighton,SwiftHaul,Delivered,284.12,10,28.6,28.41,3,3,yes
+SR10092,2026-09-06,East,Norwich,ParcelLink,Delayed,665.06,9,36.7,73.90,5,9,no
+SR10093,2026-10-23,North,Newcastle,SwiftHaul,Delivered,50.61,4,20.1,12.65,1,3,no
+SR10094,2026-09-12,West,Cardiff,SwiftHaul,Delayed,735.61,11,69.4,66.87,5,8,no
+SR10095,2026-10-13,West,Bristol,SkyRoute Fleet,Delivered,306.88,7,32.4,43.84,3,3,yes
+SR10096,2026-09-30,East,Norwich,ParcelLink,Processing,238.37,7,7.7,34.05,1,,
+SR10097,2026-09-04,West,Bristol,SwiftHaul,Delayed,335.17,1,5.0,335.17,5,9,no
+SR10098,2026-09-09,West,Cardiff,ParcelLink,Delivered,794.55,4,13.4,198.64,3,4,no
+SR10099,2026-10-16,North,Leeds,ParcelLink,Processing,502.49,10,37.7,50.25,2,,
+SR10100,2026-10-12,North,Leeds,ParcelLink,Delivered,840.40,2,4.4,420.20,5,4,yes
+SR10101,2026-09-16,East,Cambridge,SwiftHaul,In Transit,143.01,8,12.5,17.88,5,,
+SR10103,2026-09-22,West,Cardiff,ParcelLink,Delivered,840.57,8,45.6,105.07,5,5,yes
+SR10104,2026-09-03,South,Brighton,SwiftHaul,Delayed,433.58,7,41.8,61.94,2,6,no
+SR10105,2026-10-02,West,Bristol,SkyRoute Fleet,In Transit,459.53,11,44.0,41.78,2,,
+SR10106,2026-09-01,North,Leeds,ParcelLink,In Transit,785.78,2,12.6,392.89,5,,
+SR10107,2026-10-10,North,Newcastle,SwiftHaul,In Transit,86.08,5,12.0,17.22,3,,
+SR10108,2026-09-03,West,Bristol,SkyRoute Fleet,Delivered,573.58,11,66.2,52.14,5,6,no
+SR10109,2026-09-07,South,Southampton,ParcelLink,Processing,162.23,2,4.5,81.11,5,,
+SR10110,2026-09-23,North,Newcastle,ParcelLink,Delivered,143.83,6,21.8,23.97,1,1,yes
+SR10111,2026-10-26,South,Brighton,SwiftHaul,Delivered,619.57,3,10.3,206.52,1,2,no
+SR10112,2026-09-17,South,Southampton,ParcelLink,Delivered,812.57,8,36.3,101.57,3,3,yes
+SR10113,2026-09-20,South,Brighton,SwiftHaul,Delivered,236.34,8,44.5,29.54,3,4,no
+SR10114,2026-09-16,South,Brighton,SwiftHaul,In Transit,332.68,8,17.6,41.59,1,,
+SR10115,2026-09-01,East,Norwich,SwiftHaul,Delivered,674.48,11,60.3,61.32,5,5,yes
+SR10116,2026-10-11,East,Norwich,SwiftHaul,Delivered,236.80,10,50.1,23.68,3,3,yes
+SR10117,2026-09-20,South,Brighton,SkyRoute Fleet,Processing,527.92,2,9.7,263.96,1,,
+SR10118,2026-09-13,North,Leeds,SwiftHaul,Delivered,790.67,6,15.8,131.78,5,5,yes
+SR10119,2026-10-18,East,Cambridge,SkyRoute Fleet,Delivered,429.47,5,4.3,85.89,5,5,yes
+SR10120,2026-10-25,South,Brighton,SkyRoute Fleet,Processing,714.75,12,5.8,59.56,5,,
+SR10121,2026-10-08,North,Newcastle,SwiftHaul,In Transit,847.16,6,6.4,141.19,3,,
+SR10122,2026-10-29,South,Southampton,SwiftHaul,In Transit,70.95,1,5.4,70.95,3,,
+SR10123,2026-09-09,East,Norwich,SkyRoute Fleet,Processing,284.36,7,23.8,40.62,1,,
+SR10124,2026-09-30,North,Newcastle,SwiftHaul,Delivered,855.20,9,41.8,95.02,2,2,yes
+SR10125,2026-10-12,West,Bristol,ParcelLink,Delayed,559.85,12,73.5,46.65,2,6,no
+SR10126,2026-09-29,East,Cambridge,SkyRoute Fleet,Delivered,772.07,12,12.1,64.34,3,3,yes
+SR10127,2026-09-26,East,Cambridge,SkyRoute Fleet,Delayed,871.86,11,68.1,79.26,3,4,no
+SR10128,2026-10-11,West,Bristol,SkyRoute Fleet,Delivered,711.31,11,20.7,64.66,2,4,no
+SR10129,2026-10-08,South,Southampton,SkyRoute Fleet,Delayed,305.78,4,5.2,76.44,1,3,no
+SR10130,2026-09-17,North,Leeds,SkyRoute Fleet,Delivered,600.04,3,1.7,200.01,2,3,no
+SR10131,2026-09-12,North,Newcastle,SkyRoute Fleet,Delivered,127.18,4,11.9,31.80,3,2,yes
+SR10132,2026-09-29,North,Newcastle,SwiftHaul,Processing,540.39,2,6.3,270.19,5,,
+SR10133,2026-10-12,South,Southampton,SkyRoute Fleet,Delayed,898.75,1,5.6,898.75,3,7,no
+SR10134,2026-10-16,West,Cardiff,SkyRoute Fleet,Processing,810.85,2,4.7,405.43,5,,
+SR10135,2026-10-11,South,Brighton,ParcelLink,Delivered,895.25,3,10.9,298.42,3,4,no
+SR10136,2026-10-21,West,Bristol,SwiftHaul,Delayed,591.06,10,50.9,59.11,5,6,no
+SR10137,2026-09-27,South,Brighton,ParcelLink,In Transit,367.88,8,38.8,45.98,2,,
+SR10138,2026-09-24,East,Norwich,SwiftHaul,In Transit,831.84,6,4.9,138.64,3,,
+SR10139,2026-10-18,North,Newcastle,SkyRoute Fleet,Delivered,507.39,7,27.8,72.48,1,3,no
+SR10140,2026-09-23,East,Cambridge,SwiftHaul,Processing,60.53,2,4.3,30.27,5,,
+SR10141,2026-10-13,East,Cambridge,SkyRoute Fleet,Delivered,764.84,2,5.1,382.42,2,2,yes
+SR10142,2026-10-25,East,Norwich,SwiftHaul,Delivered,837.24,5,27.3,167.45,2,2,yes
+SR10143,2026-10-19,East,Cambridge,ParcelLink,Delivered,325.66,3,4.5,108.55,3,5,no
+SR10144,2026-09-10,South,Southampton,SkyRoute Fleet,Delayed,675.31,11,18.8,61.39,5,6,no
+SR10145,2026-09-24,West,Cardiff,SwiftHaul,In Transit,302.08,6,36.9,50.35,2,,
+SR10146,2026-09-04,North,Leeds,ParcelLink,Delivered,407.15,3,9.0,135.72,2,3,no
+SR10147,2026-10-19,West,Bristol,ParcelLink,In Transit,395.47,5,10.6,79.09,2,,
+SR10148,2026-09-15,West,Cardiff,SwiftHaul,Delayed,63.48,11,18.1,5.77,3,4,no
+SR10149,2026-09-08,South,Southampton,ParcelLink,Delivered,676.11,5,7.4,135.22,3,3,yes
+SR10150,2026-09-05,West,Cardiff,SwiftHaul,Delayed,52.44,12,6.2,4.37,2,5,no
+SR10152,2026-10-29,East,Cambridge,SkyRoute Fleet,Delivered,401.49,10,10.5,40.15,5,7,no
+SR10153,2026-10-26,West,Cardiff,SwiftHaul,Delayed,315.47,7,17.0,45.07,1,5,no
+SR10154,2026-10-03,South,Southampton,ParcelLink,Delivered,325.72,9,56.2,36.19,1,2,no
+SR10155,2026-09-13,South,Southampton,SwiftHaul,Delivered,150.29,2,10.1,75.14,2,2,yes
+SR10156,2026-10-19,North,Newcastle,SwiftHaul,Delivered,832.88,11,42.3,75.72,5,5,yes
+SR10157,2026-09-29,East,Norwich,ParcelLink,Processing,406.35,6,13.5,67.73,2,,
+SR10158,2026-09-20,East,Cambridge,ParcelLink,Delayed,48.28,1,2.6,48.28,3,4,no
+SR10159,2026-10-09,East,Cambridge,ParcelLink,Delivered,528.59,11,68.4,48.05,1,2,no
+SR10160,2026-09-21,North,Newcastle,SwiftHaul,In Transit,148.51,10,7.8,14.85,2,,
+SR10161,2026-10-12,North,Leeds,SkyRoute Fleet,Delivered,234.25,12,36.8,19.52,1,2,no
+SR10162,2026-09-24,West,Cardiff,ParcelLink,Delayed,376.76,9,22.2,41.86,2,5,no
+SR10163,2026-09-05,North,Newcastle,SkyRoute Fleet,Processing,508.80,11,30.3,46.25,3,,
+SR10164,2026-09-22,East,Norwich,SwiftHaul,Processing,602.30,11,65.9,54.75,2,,
+SR10165,2026-09-09,East,Norwich,ParcelLink,Processing,509.65,12,51.9,42.47,5,,
+SR10166,2026-10-13,East,Cambridge,SwiftHaul,Delivered,335.22,11,28.7,30.47,1,3,no
+SR10167,2026-09-15,South,Southampton,SkyRoute Fleet,Delivered,83.29,6,33.3,13.88,5,5,yes
+SR10168,2026-10-27,North,Leeds,SwiftHaul,Delayed,348.40,9,12.5,38.71,1,4,no
+SR10169,2026-09-27,South,Brighton,SwiftHaul,Processing,651.83,8,50.5,81.48,1,,
+SR10170,2026-10-05,East,Norwich,ParcelLink,Processing,869.55,8,41.5,108.69,2,,
+SR10171,2026-10-20,South,Brighton,ParcelLink,Delivered,460.07,11,32.5,41.82,5,5,yes
+SR10172,2026-09-04,South,Brighton,ParcelLink,Delivered,505.77,10,10.3,50.58,2,2,yes
+SR10173,2026-09-29,North,Leeds,ParcelLink,Delivered,96.17,2,11.9,48.09,2,2,yes
+SR10174,2026-09-26,West,Cardiff,SkyRoute Fleet,Delivered,356.76,1,0.9,356.76,5,4,yes
+SR10175,2026-10-12,South,Brighton,SkyRoute Fleet,Delivered,136.78,6,12.9,22.80,1,3,no
+SR10176,2026-09-29,West,Bristol,SkyRoute Fleet,Processing,31.82,3,5.1,10.61,5,,
+SR10177,2026-10-20,South,Brighton,SkyRoute Fleet,Delayed,281.52,12,8.3,23.46,5,6,no
+SR10178,2026-09-05,West,Bristol,ParcelLink,Processing,543.11,10,5.0,54.31,5,,
+SR10179,2026-09-28,South,Southampton,SwiftHaul,Processing,327.24,3,11.6,109.08,3,,
+SR10180,2026-10-04,South,Brighton,SkyRoute Fleet,Processing,858.76,11,40.9,78.07,1,,
+SR10181,2026-10-11,North,Newcastle,ParcelLink,In Transit,239.48,8,4.0,29.93,1,,
+SR10182,2026-10-18,North,Newcastle,SkyRoute Fleet,Delivered,54.24,4,14.9,13.56,1,2,no
+SR10183,2026-10-11,South,Southampton,SkyRoute Fleet,Processing,70.84,8,41.1,8.86,5,,
+SR10184,2026-10-21,West,Bristol,SkyRoute Fleet,Delivered,294.30,5,11.5,58.86,2,1,yes
+SR10185,2026-10-19,West,Bristol,ParcelLink,Delayed,330.92,8,41.3,41.37,3,4,no
+SR10186,2026-10-27,East,Cambridge,SwiftHaul,Delivered,404.17,2,12.5,202.09,3,3,yes
+SR10187,2026-10-30,East,Cambridge,SkyRoute Fleet,Delivered,658.47,8,7.1,82.31,5,5,yes
+SR10188,2026-09-06,South,Brighton,SwiftHaul,Delayed,276.64,5,15.6,55.33,3,4,no
+SR10189,2026-09-29,West,Bristol,SwiftHaul,Delivered,784.98,12,30.6,65.42,5,5,yes
+SR10190,2026-10-13,West,Cardiff,ParcelLink,Delivered,469.08,11,54.7,42.64,1,1,yes
+SR10191,2026-09-09,South,Southampton,SkyRoute Fleet,Delivered,703.99,3,7.9,234.66,5,4,yes
+SR10192,2026-10-31,West,Cardiff,ParcelLink,Delayed,407.89,1,0.9,407.89,2,6,no
+SR10193,2026-10-12,South,Brighton,SkyRoute Fleet,Delayed,865.06,6,3.3,144.18,5,8,no
+SR10194,2026-10-29,South,Southampton,ParcelLink,In Transit,700.84,9,42.3,77.87,5,,
+SR10195,2026-09-08,South,Southampton,SkyRoute Fleet,Delayed,415.06,5,29.4,83.01,5,7,no
+SR10196,2026-09-23,West,Bristol,SwiftHaul,Delivered,494.82,11,64.2,44.98,3,5,no
+SR10197,2026-10-21,South,Brighton,SwiftHaul,Processing,213.45,12,76.9,17.79,2,,
+SR10198,2026-10-06,South,Brighton,ParcelLink,Delivered,726.24,8,30.1,90.78,1,1,yes
+SR10199,2026-10-17,North,Newcastle,SwiftHaul,Delivered,378.55,5,14.5,75.71,5,7,no
+SR10201,2026-10-04,South,Southampton,ParcelLink,Delivered,160.72,7,16.6,22.96,1,1,yes
+SR10202,2026-09-17,South,Southampton,SwiftHaul,Delivered,861.37,9,18.7,95.71,3,2,yes
+SR10203,2026-10-08,East,Norwich,SkyRoute Fleet,Delayed,597.98,9,43.2,66.44,1,3,no
+SR10204,2026-09-03,East,Cambridge,SwiftHaul,Delayed,201.57,1,3.9,201.57,1,2,no
+SR10205,2026-10-12,North,Newcastle,ParcelLink,In Transit,231.72,11,58.6,21.07,3,,
+SR10206,2026-09-04,West,Bristol,ParcelLink,Delivered,382.83,8,25.9,47.85,1,3,no
+SR10207,2026-10-17,East,Cambridge,ParcelLink,Delayed,130.73,3,8.0,43.58,3,6,no
+SR10208,2026-09-18,North,Newcastle,SkyRoute Fleet,Delivered,139.68,4,2.8,34.92,5,4,yes
+SR10209,2026-10-23,West,Cardiff,SwiftHaul,Delayed,653.20,7,10.9,93.31,2,4,no
+SR10210,2026-10-02,South,Brighton,ParcelLink,In Transit,35.51,9,55.5,3.95,5,,
+SR10211,2026-09-04,West,Cardiff,ParcelLink,Delivered,543.80,4,22.2,135.95,3,2,yes
+SR10212,2026-09-28,West,Bristol,ParcelLink,Delivered,658.84,9,45.5,73.20,1,1,yes
+SR10213,2026-10-06,East,Norwich,ParcelLink,Delivered,504.60,7,5.9,72.09,1,2,no
+SR10214,2026-09-07,West,Cardiff,ParcelLink,Delayed,718.48,5,12.3,143.70,1,3,no
+SR10215,2026-09-03,East,Norwich,SkyRoute Fleet,Delivered,136.28,4,9.7,34.07,5,6,no
+SR10216,2026-09-21,West,Cardiff,SkyRoute Fleet,Delayed,362.76,8,33.3,45.34,2,4,no
+SR10217,2026-10-01,East,Norwich,ParcelLink,Delayed,308.15,6,6.4,51.36,5,8,no
+SR10218,2026-09-17,West,Bristol,SwiftHaul,Delayed,60.45,5,16.7,12.09,1,5,no
+SR10219,2026-10-07,West,Bristol,SkyRoute Fleet,Delivered,31.76,11,25.4,2.89,2,1,yes
+SR10220,2026-09-27,South,Brighton,SwiftHaul,In Transit,658.75,12,56.5,54.90,2,,
+SR10221,2026-09-21,South,Southampton,ParcelLink,Delayed,822.23,6,14.9,137.04,5,9,no
+SR10222,2026-10-10,East,Cambridge,SkyRoute Fleet,Processing,862.24,12,25.2,71.85,3,,
+SR10223,2026-09-14,East,Cambridge,ParcelLink,Delivered,439.63,5,19.1,87.93,3,5,no
+SR10224,2026-10-23,East,Cambridge,SkyRoute Fleet,Delivered,272.05,2,4.3,136.03,5,5,yes
+SR10225,2026-10-01,North,Leeds,SkyRoute Fleet,Delivered,747.74,8,16.4,93.47,3,5,no
+SR10226,2026-09-04,East,Norwich,SwiftHaul,Delivered,221.06,2,2.0,110.53,2,2,yes
+SR10227,2026-10-14,East,Norwich,SkyRoute Fleet,Processing,868.60,8,50.9,108.58,1,,
+SR10228,2026-10-01,South,Southampton,ParcelLink,In Transit,299.23,11,47.7,27.20,5,,
+SR10229,2026-10-05,North,Leeds,SkyRoute Fleet,Processing,384.83,10,55.1,38.48,2,,
+SR10230,2026-10-30,North,Newcastle,SkyRoute Fleet,In Transit,23.20,8,30.9,2.90,2,,
+SR10231,2026-10-05,North,Newcastle,SkyRoute Fleet,Delivered,768.19,5,16.3,153.64,5,7,no
+SR10232,2026-09-30,South,Brighton,SwiftHaul,Delivered,179.79,6,29.4,29.96,2,4,no
+SR10233,2026-10-10,East,Cambridge,ParcelLink,Delayed,471.02,11,10.2,42.82,2,4,no
+SR10234,2026-10-30,North,Leeds,SkyRoute Fleet,Delivered,245.79,3,5.5,81.93,5,5,yes
+SR10235,2026-10-12,East,Cambridge,SwiftHaul,Delivered,224.13,5,22.4,44.83,1,1,yes
+SR10236,2026-10-03,West,Cardiff,SwiftHaul,Delivered,118.91,3,18.0,39.64,5,7,no
+SR10237,2026-09-09,East,Cambridge,SkyRoute Fleet,Delivered,417.66,10,64.3,41.77,2,2,yes
+SR10238,2026-10-19,East,Norwich,SkyRoute Fleet,In Transit,617.10,12,48.4,51.43,5,,
+SR10239,2026-10-29,North,Leeds,SkyRoute Fleet,Delayed,748.47,8,47.3,93.56,3,4,no
+SR10240,2026-09-21,South,Brighton,SkyRoute Fleet,Delayed,617.06,9,43.0,68.56,2,4,no

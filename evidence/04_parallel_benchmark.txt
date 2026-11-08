@@ -1,0 +1,6 @@
+$ python src/pipeline.py --benchmark --simulate-latency 20
+2026-11-08 16:35:04,988 | INFO    | run=bench | extract | read 241 rows from orders.csv (attempt 1)
+workers=1  transform=  4978.3 ms  rows=233
+workers=2  transform=  2415.4 ms  rows=233
+workers=4  transform=  1206.0 ms  rows=233
+workers=8  transform=   625.1 ms  rows=233

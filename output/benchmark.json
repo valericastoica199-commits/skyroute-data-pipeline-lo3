@@ -1,0 +1,22 @@
+[
+  {
+    "workers": 1,
+    "transform_ms": 4978.3,
+    "speedup": 1.0
+  },
+  {
+    "workers": 2,
+    "transform_ms": 2415.4,
+    "speedup": 2.06
+  },
+  {
+    "workers": 4,
+    "transform_ms": 1206.0,
+    "speedup": 4.13
+  },
+  {
+    "workers": 8,
+    "transform_ms": 625.1,
+    "speedup": 7.96
+  }
+]

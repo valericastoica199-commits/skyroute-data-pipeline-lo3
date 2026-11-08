@@ -1,0 +1,9 @@
+order_id,order_date,region,depot,carrier,status,order_value,items,weight_kg,promised_days,actual_days,reject_reason
+SR10018,2026-09-08,North,Newcastle,ParcelLink,Delayed,-45.00,6,11.2,5,6,"values out of range (value>=0, items>=1, weight>0, promised>=1)"
+SR10043,31/10/2026,West,Bristol,SwiftHaul,Processing,110.66,12,68.6,2,,invalid order_date; expected YYYY-MM-DD
+SR10064,2026-10-26,Central,Newcastle,SkyRoute Fleet,Delivered,59.50,11,29.8,5,5,unknown region
+SR10089,2026-10-14,East,Norwich,ParcelLink,Processing,712.23,three,33.7,1,,order_value/items/weight_kg/promised_days must be numeric
+,2026-10-30,South,Brighton,SkyRoute Fleet,Delivered,265.31,5,11.1,5,5,empty order_id
+SR10151,2026-09-26,North,Newcastle,ParcelLink,Lost?,116.93,10,5.3,5,6,unknown status
+SR10200,2026-09-30,North,Newcastle,SkyRoute Fleet,Delivered,791.99,6,,1,1,order_value/items/weight_kg/promised_days must be numeric
+SR10121,2026-10-08,North,Newcastle,SwiftHaul,In Transit,847.16,6,6.4,3,,duplicate order_id

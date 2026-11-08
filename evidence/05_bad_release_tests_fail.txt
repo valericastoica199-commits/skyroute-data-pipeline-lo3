@@ -1,0 +1,22 @@
+$ git show v1.2.0 -- src/pipeline.py   (the faulty change)
+commit abd988f  v1.2.0 switch to UK date format
+-PIPELINE_VERSION = "1.1.0"
++PIPELINE_VERSION = "1.2.0"
+-DATE_FORMAT = "%Y-%m-%d"
++DATE_FORMAT = "%d/%m/%Y"
+
+$ pytest -q --tb=no
+FFFFFF.F.FFF...F..                                                       [100%]
+=========================== short test summary info ===========================
+FAILED tests/test_pipeline.py::test_valid_row_passes - AssertionError: assert...
+FAILED tests/test_pipeline.py::test_bad_rows_are_rejected[order_value--2-values out of range]
+FAILED tests/test_pipeline.py::test_bad_rows_are_rejected[order_date-31/10/2026-invalid order_date]
+FAILED tests/test_pipeline.py::test_bad_rows_are_rejected[region-Central-unknown region]
+FAILED tests/test_pipeline.py::test_bad_rows_are_rejected[status-Lost?-unknown status]
+FAILED tests/test_pipeline.py::test_bad_rows_are_rejected[items-three-must be numeric]
+FAILED tests/test_pipeline.py::test_bad_rows_are_rejected[weight_kg--must be numeric]
+FAILED tests/test_pipeline.py::test_delivered_needs_actual_days - AssertionEr...
+FAILED tests/test_pipeline.py::test_in_transit_without_actual_days_is_fine - ...
+FAILED tests/test_pipeline.py::test_duplicates_are_rejected - assert 0 == 1
+FAILED tests/test_pipeline.py::test_end_to_end_run - pipeline.QualityGateErro...
+11 failed, 7 passed in 0.44s

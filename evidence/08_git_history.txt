@@ -1,0 +1,16 @@
+$ git log --oneline --graph --decorate --all
+* 585135a (HEAD -> main, tag: v1.2.1) v1.2.1 hotfix release after rollback of UK date format change
+* a3e4c40 Revert "v1.2.0 switch to UK date format"
+* abd988f (tag: v1.2.0) v1.2.0 switch to UK date format
+*   8bbd012 (tag: v1.1.0) Merge pull request #1 from feature/dashboard-serverless
+|\  
+| * 435f191 (feature/dashboard-serverless) Bump version to 1.1.0
+| * 4257d43 Add operations dashboard and Vercel serverless function
+|/  
+* 48db841 (tag: v1.0.0) v1.0.0 baseline pipeline: extract, validate, parallel transform, load, logging, tests, Render cron
+
+$ git tag -n
+v1.0.0          Baseline release
+v1.1.0          Dashboard + serverless deployment
+v1.2.0          UK date format
+v1.2.1          Hotfix: rolled back v1.2.0

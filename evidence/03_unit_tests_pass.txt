@@ -1,0 +1,23 @@
+$ pytest -v
+collecting ... collected 18 items
+
+tests/test_pipeline.py::test_valid_row_passes PASSED                     [  5%]
+tests/test_pipeline.py::test_bad_rows_are_rejected[order_value--2-values out of range] PASSED [ 11%]
+tests/test_pipeline.py::test_bad_rows_are_rejected[order_date-31/10/2026-invalid order_date] PASSED [ 16%]
+tests/test_pipeline.py::test_bad_rows_are_rejected[region-Central-unknown region] PASSED [ 22%]
+tests/test_pipeline.py::test_bad_rows_are_rejected[status-Lost?-unknown status] PASSED [ 27%]
+tests/test_pipeline.py::test_bad_rows_are_rejected[items-three-must be numeric] PASSED [ 33%]
+tests/test_pipeline.py::test_bad_rows_are_rejected[order_id-  -empty order_id] PASSED [ 38%]
+tests/test_pipeline.py::test_bad_rows_are_rejected[weight_kg--must be numeric] PASSED [ 44%]
+tests/test_pipeline.py::test_missing_column_reported PASSED              [ 50%]
+tests/test_pipeline.py::test_delivered_needs_actual_days PASSED          [ 55%]
+tests/test_pipeline.py::test_in_transit_without_actual_days_is_fine PASSED [ 61%]
+tests/test_pipeline.py::test_duplicates_are_rejected PASSED              [ 66%]
+tests/test_pipeline.py::test_transform_value_per_item_and_on_time PASSED [ 72%]
+tests/test_pipeline.py::test_parallel_matches_sequential_order PASSED    [ 77%]
+tests/test_pipeline.py::test_region_kpis PASSED                          [ 83%]
+tests/test_pipeline.py::test_end_to_end_run PASSED                       [ 88%]
+tests/test_pipeline.py::test_quality_gate_blocks_bad_batch PASSED        [ 94%]
+tests/test_pipeline.py::test_missing_input_raises PASSED                 [100%]
+
+============================= 18 passed in 0.35s ==============================

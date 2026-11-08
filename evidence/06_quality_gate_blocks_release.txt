@@ -1,0 +1,6 @@
+$ python src/pipeline.py --workers 4
+2026-11-08 16:34:14,048 | INFO    | run=c353aefb | main | pipeline v1.2.0 started (trigger=manual, workers=4)
+2026-11-08 16:34:14,050 | INFO    | run=c353aefb | extract | read 241 rows from orders.csv (attempt 1)
+2026-11-08 16:34:14,069 | WARNING | run=c353aefb | validate | rejected <blank>: empty order_id
+2026-11-08 16:34:14,102 | ERROR   | run=c353aefb | quality | reject rate 99.6% above limit 10.0%; outputs not published
+exit code: 2

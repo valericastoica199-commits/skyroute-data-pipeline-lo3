@@ -1,0 +1,29 @@
+$ cat render.yaml
+services:
+  - type: cron
+    name: skyroute-orders-pipeline
+    runtime: python
+    branch: main
+    schedule: "0 2 * * *"          # every day at 02:00 UTC
+    buildCommand: "pip install -r requirements.txt && pytest -q"
+    startCommand: "python src/pipeline.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: SKYROUTE_WORKERS
+        value: "4"
+      - key: SKYROUTE_MAX_REJECT_RATE
+        value: "0.10"
+      - key: SKYROUTE_TRIGGER
+        value: "render-cron"
+
+$ cat vercel.json
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/run.py": { "maxDuration": 60, "includeFiles": "{src,data}/**" }
+  },
+  "crons": [
+    { "path": "/api/run", "schedule": "0 6 * * *" }
+  ]
+}

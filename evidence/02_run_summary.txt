@@ -1,0 +1,31 @@
+$ cat output/run_summary.json
+{
+  "run_id": "7e355c7d",
+  "version": "1.2.1",
+  "trigger": "manual",
+  "finished_at": "2026-11-08T11:04:42+00:00",
+  "input_file": "orders.csv",
+  "input_rows": 241,
+  "processed_rows": 233,
+  "rejected_rows": 8,
+  "reject_rate_pct": 3.32,
+  "reject_reasons": {
+    "values out of range (value>=0, items>=1, weight>0, promised>=1)": 1,
+    "invalid order_date; expected YYYY-MM-DD": 1,
+    "unknown region": 1,
+    "order_value/items/weight_kg/promised_days must be numeric": 2,
+    "empty order_id": 1,
+    "unknown status": 1,
+    "duplicate order_id": 1
+  },
+  "workers": 4,
+  "stage_timings": {
+    "extract_ms": 1.81,
+    "validate_ms": 13.31,
+    "transform_ms": 10.79,
+    "aggregate_ms": 0.34,
+    "load_ms": 6.63
+  },
+  "duration_ms": 34.18,
+  "status": "completed_with_rejections"
+}

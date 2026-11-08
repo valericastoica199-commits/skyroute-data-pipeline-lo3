@@ -1,0 +1,7 @@
+$ python src/pipeline.py --input data/missing.csv
+2026-11-08 16:34:49,243 | INFO    | run=73162179 | main | pipeline v1.2.1 started (trigger=manual, workers=4)
+2026-11-08 16:34:49,243 | WARNING | run=73162179 | extract | input not found: data\missing.csv (attempt 1/3)
+2026-11-08 16:34:49,749 | WARNING | run=73162179 | extract | input not found: data\missing.csv (attempt 2/3)
+2026-11-08 16:34:50,751 | WARNING | run=73162179 | extract | input not found: data\missing.csv (attempt 3/3)
+2026-11-08 16:34:50,752 | ERROR   | run=73162179 | extract | input missing: [Errno 2] No such file or directory: 'data\\missing.csv'
+exit code: 1

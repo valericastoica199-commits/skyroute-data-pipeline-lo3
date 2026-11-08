@@ -1,0 +1,13 @@
+$ python src/pipeline.py --workers 4
+2026-11-08 16:34:42,759 | INFO    | run=7e355c7d | main | pipeline v1.2.1 started (trigger=manual, workers=4)
+2026-11-08 16:34:42,761 | INFO    | run=7e355c7d | extract | read 241 rows from orders.csv (attempt 1)
+2026-11-08 16:34:42,775 | WARNING | run=7e355c7d | validate | rejected SR10018: values out of range (value>=0, items>=1, weight>0, promised>=1)
+2026-11-08 16:34:42,775 | WARNING | run=7e355c7d | validate | rejected SR10043: invalid order_date; expected YYYY-MM-DD
+2026-11-08 16:34:42,775 | WARNING | run=7e355c7d | validate | rejected SR10064: unknown region
+2026-11-08 16:34:42,775 | WARNING | run=7e355c7d | validate | rejected SR10089: order_value/items/weight_kg/promised_days must be numeric
+2026-11-08 16:34:42,775 | WARNING | run=7e355c7d | validate | rejected <blank>: empty order_id
+2026-11-08 16:34:42,775 | WARNING | run=7e355c7d | validate | rejected SR10151: unknown status
+2026-11-08 16:34:42,775 | WARNING | run=7e355c7d | validate | rejected SR10200: order_value/items/weight_kg/promised_days must be numeric
+2026-11-08 16:34:42,776 | WARNING | run=7e355c7d | validate | rejected SR10121: duplicate order_id
+2026-11-08 16:34:42,798 | INFO    | run=7e355c7d | main | completed: input=241 processed=233 rejected=8 duration=34.2ms status=completed_with_rejections
+{

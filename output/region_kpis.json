@@ -1,0 +1,30 @@
+[
+  {
+    "region": "East",
+    "orders": 57,
+    "revenue": 24852.12,
+    "delayed": 12,
+    "on_time_rate": 42.5
+  },
+  {
+    "region": "North",
+    "orders": 54,
+    "revenue": 23818.49,
+    "delayed": 7,
+    "on_time_rate": 47.2
+  },
+  {
+    "region": "South",
+    "orders": 65,
+    "revenue": 31261.42,
+    "delayed": 13,
+    "on_time_rate": 41.0
+  },
+  {
+    "region": "West",
+    "orders": 57,
+    "revenue": 24929.92,
+    "delayed": 17,
+    "on_time_rate": 34.1
+  }
+]
