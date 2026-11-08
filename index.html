@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SkyRoute Pipeline Operations</title>
+<style>
+:root{--bg:#f3f5f9;--card:#fff;--ink:#16203a;--muted:#5d6880;--line:#e2e6ef;--brand:#1b3a8c;--ok:#1d7a46;--warn:#b26a00;--bad:#b3261e;--chip:#eef1f8}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 "Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:var(--brand);color:#fff;padding:22px 5vw}
+header h1{margin:0;font-size:22px}header p{margin:4px 0 0;opacity:.85}
+main{max-width:1100px;margin:22px auto;padding:0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.card,section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+section{margin-top:16px}h2{font-size:16px;margin:0 0 10px}
+.label{color:var(--muted);font-size:13px}.value{font-size:28px;font-weight:700;font-variant-numeric:tabular-nums}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.two section{margin-top:0}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;background:var(--chip)}
+.success{color:var(--ok)}.completed_with_rejections{color:var(--warn)}.failed_quality_gate{color:var(--bad)}
+.bar{height:10px;background:var(--brand);border-radius:3px}
+code{background:var(--chip);padding:2px 6px;border-radius:4px;font-size:13px}
+button{background:var(--brand);color:#fff;border:0;border-radius:6px;padding:8px 14px;font:inherit;cursor:pointer}
+#note{color:var(--muted);font-size:13px;margin-left:8px}
+ol{margin:0;padding-left:20px}
+</style>
+</head>
+<body>
+<header>
+  <h1>SkyRoute Logistics | Pipeline Operations</h1>
+  <p>Shipments reporting pipeline: run status, data quality, stage timings and deployment history</p>
+</header>
+<main>
+  <div class="grid">
+    <div class="card"><div class="label">Last run status</div><div class="value" style="font-size:18px;margin-top:8px"><span id="status" class="badge">-</span></div></div>
+    <div class="card"><div class="label">Input rows</div><div class="value" id="input">-</div></div>
+    <div class="card"><div class="label">Processed rows</div><div class="value" id="processed">-</div></div>
+    <div class="card"><div class="label">Rejected rows</div><div class="value" id="rejected">-</div></div>
+    <div class="card"><div class="label">Run duration (ms)</div><div class="value" id="duration">-</div></div>
+    <div class="card"><div class="label">Version / trigger</div><div class="value" style="font-size:18px;margin-top:8px" id="version">-</div></div>
+  </div>
+
+  <div class="two" style="margin-top:16px">
+    <section><h2>Stage timings (ms)</h2><table id="stages"></table></section>
+    <section><h2>Rejected rows by reason</h2><table id="reasons"></table></section>
+  </div>
+
+  <section><h2>Regional KPIs (valid orders)</h2>
+    <table id="kpis"><thead><tr><th>Region</th><th class="num">Orders</th><th class="num">Revenue (£)</th><th class="num">Delayed</th><th class="num">On-time %</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section><h2>Run history</h2>
+    <table id="history"><thead><tr><th>Finished (UTC)</th><th>Run</th><th>Version</th><th>Trigger</th><th class="num">In</th><th class="num">Out</th><th class="num">Rejected</th><th class="num">ms</th><th>Status</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section><h2>Run on demand (serverless)</h2>
+    <button id="runBtn">Trigger /api/run</button><span id="note">Works when deployed to Vercel with a valid CRON_SECRET token.</span>
+  </section>
+
+  <div class="two" style="margin-top:16px">
+    <section><h2>Deployment methods</h2><ol>
+      <li><b>Manual</b> - <code>python src/pipeline.py --workers 4</code> or <code>run_pipeline.bat</code></li>
+      <li><b>Scheduled</b> - Render Cron Job, <code>render.yaml</code>, daily 02:00 UTC</li>
+      <li><b>Serverless</b> - Vercel Function <code>api/run.py</code>, Vercel Cron 06:00 UTC</li>
+      <li><b>CI</b> - GitHub Actions runs <code>pytest</code> on every push / pull request</li></ol></section>
+    <section><h2>Rollback</h2><ol>
+      <li>Platform: promote the last good deployment (Render / Vercel Instant Rollback)</li>
+      <li>Code: <code>git revert &lt;bad-sha&gt;</code>, push, CI re-tests and redeploys</li>
+      <li>Data: restore outputs from the previous run backup</li>
+      <li>Full plan in <code>ROLLBACK_PLAN.md</code></li></ol></section>
+  </div>
+</main>
+<script>
+const FALLBACK = {summary:null, kpis:[], history:[]};
+async function getJSON(path){
+  try{const r=await fetch(path,{cache:"no-store"}); if(!r.ok) throw 0; return await r.json();}
+  catch(e){return null;}
+}
+const fmt = n => Number(n).toLocaleString("en-GB");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function renderSummary(s){
+  if(!s) return;
+  const st=document.getElementById("status"); st.textContent=s.status.replace(/_/g," "); st.className="badge "+s.status;
+  input.textContent=fmt(s.input_rows); processed.textContent=fmt(s.processed_rows);
+  rejected.textContent=fmt(s.rejected_rows)+" ("+s.reject_rate_pct+"%)";
+  duration.textContent=fmt(s.duration_ms); version.textContent="v"+s.version+" / "+s.trigger;
+  const t=s.stage_timings, max=Math.max(...Object.values(t));
+  stages.innerHTML=Object.entries(t).map(([k,v])=>`<tr><td style="width:90px">${k.replace("_ms","")}</td><td><div class="bar" style="width:${(v/max*100).toFixed(1)}%"></div></td><td class="num" style="width:70px">${v}</td></tr>`).join("");
+  reasons.innerHTML="<tr><th>Reason</th><th class='num'>Rows</th></tr>"+Object.entries(s.reject_reasons).map(([k,v])=>`<tr><td>${esc(k)}</td><td class="num">${v}</td></tr>`).join("");
+}
+function renderKpis(k){
+  document.querySelector("#kpis tbody").innerHTML=(k||[]).map(r=>`<tr><td>${r.region}</td><td class="num">${r.orders}</td><td class="num">${fmt(r.revenue.toFixed(2))}</td><td class="num">${r.delayed}</td><td class="num">${r.on_time_rate}</td></tr>`).join("");
+}
+function renderHistory(h){
+  document.querySelector("#history tbody").innerHTML=(h||[]).slice().reverse().slice(0,10).map(r=>`<tr><td>${r.finished_at.replace("T"," ").replace("+00:00","")}</td><td><code>${r.run_id}</code></td><td>v${r.version}</td><td>${r.trigger}</td><td class="num">${r.input_rows}</td><td class="num">${r.processed_rows}</td><td class="num">${r.rejected_rows}</td><td class="num">${r.duration_ms}</td><td class="${r.status}">${r.status.replace(/_/g," ")}</td></tr>`).join("");
+}
+(async()=>{
+  const [s,k,h]=await Promise.all([getJSON("output/run_summary.json"),getJSON("output/region_kpis.json"),getJSON("output/run_history.json")]);
+  renderSummary(s||FALLBACK.summary); renderKpis(k||FALLBACK.kpis); renderHistory(h||FALLBACK.history);
+  if(!s) note.textContent="Could not load output/*.json - serve this folder (python -m http.server) or deploy it.";
+})();
+runBtn.onclick=async()=>{
+  const token=prompt("CRON_SECRET token"); if(token===null) return;
+  note.textContent="Running...";
+  try{const r=await fetch("/api/run",{headers:{Authorization:"Bearer "+token}}); const j=await r.json();
+    if(r.ok){renderSummary(j); note.textContent="Run "+j.run_id+" finished: "+j.status;} else note.textContent="HTTP "+r.status+": "+(j.error||"error");}
+  catch(e){note.textContent="API not reachable (only available on Vercel).";}
+};
+</script>
+</body>
+</html>
