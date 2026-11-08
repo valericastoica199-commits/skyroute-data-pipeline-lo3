@@ -57,13 +57,14 @@ ol{margin:0;padding-left:20px}
   </section>
 
   <section><h2>Run on demand (serverless)</h2>
-    <button id="runBtn">Trigger /api/run</button><span id="note">Works when deployed to Vercel with a valid CRON_SECRET token.</span>
+    <button id="runBtn">Trigger /api/run</button><span id="note">Works on the Render web service (or Vercel) with the CRON_SECRET token from the Environment tab.</span>
   </section>
 
   <div class="two" style="margin-top:16px">
     <section><h2>Deployment methods</h2><ol>
       <li><b>Manual</b> - <code>python src/pipeline.py --workers 4</code> or <code>run_pipeline.bat</code></li>
       <li><b>Scheduled</b> - Render Cron Job, <code>render.yaml</code>, daily 02:00 UTC</li>
+      <li><b>Web service</b> - Render runs <code>server.py</code>: this dashboard + <code>/api/run</code></li>
       <li><b>Serverless</b> - Vercel Function <code>api/run.py</code>, Vercel Cron 06:00 UTC</li>
       <li><b>CI</b> - GitHub Actions runs <code>pytest</code> on every push / pull request</li></ol></section>
     <section><h2>Rollback</h2><ol>
@@ -108,7 +109,7 @@ runBtn.onclick=async()=>{
   note.textContent="Running...";
   try{const r=await fetch("/api/run",{headers:{Authorization:"Bearer "+token}}); const j=await r.json();
     if(r.ok){renderSummary(j); note.textContent="Run "+j.run_id+" finished: "+j.status;} else note.textContent="HTTP "+r.status+": "+(j.error||"error");}
-  catch(e){note.textContent="API not reachable (only available on Vercel).";}
+  catch(e){note.textContent="API not reachable (only available when deployed on Render or Vercel).";}
 };
 </script>
 </body>

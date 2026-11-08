@@ -26,7 +26,7 @@ def colour(line: str) -> str:
     return FG
 
 
-def render(txt: Path, title: str, max_lines: int = 40, width: int = 118) -> None:
+def render(txt: Path, title: str, max_lines: int = 60, width: int = 118) -> None:
     lines = txt.read_text(encoding="utf-8").splitlines()
     if len(lines) > max_lines:
         lines = lines[:max_lines - 1] + ["..."]

@@ -1,14 +1,10 @@
-# Render Blueprint - scheduled deployment (Cron Job).
-# Render cron schedules use UTC. Each push to main triggers a new build;
-# earlier builds stay in the Events/Deploys history for rollback.
-services:
-  - type: cron
-    name: skyroute-orders-pipeline
-    runtime: python
-    branch: main
-    schedule: "0 2 * * *"          # every day at 02:00 UTC
-    buildCommand: "pip install -r requirements.txt && pytest -q"
-    startCommand: "python src/pipeline.py"
+# Render Blueprint (Render -> New -> Blueprint -> pick this repo).
+# Every push to main rebuilds both services; old deploys stay in the
+# "Events" history, so any of them can be rolled back to in one click.
+# Note: Render cron schedules use UTC.
+
+envVarGroups:
+  - name: skyroute-settings
     envVars:
       - key: PYTHON_VERSION
         value: "3.12.7"
@@ -16,5 +12,36 @@ services:
         value: "4"
       - key: SKYROUTE_MAX_REJECT_RATE
         value: "0.10"
+
+services:
+  # 1) Dashboard + on-demand run (free instance type works)
+  - type: web
+    name: skyroute-pipeline-dashboard
+    runtime: python
+    plan: free
+    branch: main
+    autoDeploy: true
+    buildCommand: "pip install -r requirements.txt && pytest -q"
+    startCommand: "python server.py"
+    healthCheckPath: /healthz
+    envVars:
+      - fromGroup: skyroute-settings
+      - key: SKYROUTE_TRIGGER
+        value: "render-deploy"
+      - key: CRON_SECRET
+        generateValue: true      # Render creates a random secret; see Environment tab
+
+  # 2) Scheduled deployment - runs the pipeline every day at 02:00 UTC.
+  #    Render cron jobs are a paid service type (billed per second of run time).
+  #    If you have no payment method on Render, delete this block before syncing.
+  - type: cron
+    name: skyroute-orders-pipeline
+    runtime: python
+    branch: main
+    schedule: "0 2 * * *"
+    buildCommand: "pip install -r requirements.txt && pytest -q"
+    startCommand: "python src/pipeline.py"
+    envVars:
+      - fromGroup: skyroute-settings
       - key: SKYROUTE_TRIGGER
         value: "render-cron"

@@ -53,5 +53,16 @@
     "rejected_rows": 8,
     "duration_ms": 88.7,
     "status": "completed_with_rejections"
+  },
+  {
+    "run_id": "7084b021",
+    "finished_at": "2026-11-08T11:51:54+00:00",
+    "version": "1.2.1",
+    "trigger": "manual",
+    "input_rows": 241,
+    "processed_rows": 233,
+    "rejected_rows": 8,
+    "duration_ms": 147.56,
+    "status": "completed_with_rejections"
   }
 ]

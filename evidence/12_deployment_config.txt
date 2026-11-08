@@ -1,12 +1,6 @@
 $ cat render.yaml
-services:
-  - type: cron
-    name: skyroute-orders-pipeline
-    runtime: python
-    branch: main
-    schedule: "0 2 * * *"          # every day at 02:00 UTC
-    buildCommand: "pip install -r requirements.txt && pytest -q"
-    startCommand: "python src/pipeline.py"
+envVarGroups:
+  - name: skyroute-settings
     envVars:
       - key: PYTHON_VERSION
         value: "3.12.7"
@@ -14,6 +8,31 @@ services:
         value: "4"
       - key: SKYROUTE_MAX_REJECT_RATE
         value: "0.10"
+services:
+  - type: web
+    name: skyroute-pipeline-dashboard
+    runtime: python
+    plan: free
+    branch: main
+    autoDeploy: true
+    buildCommand: "pip install -r requirements.txt && pytest -q"
+    startCommand: "python server.py"
+    healthCheckPath: /healthz
+    envVars:
+      - fromGroup: skyroute-settings
+      - key: SKYROUTE_TRIGGER
+        value: "render-deploy"
+      - key: CRON_SECRET
+        generateValue: true      # Render creates a random secret; see Environment tab
+  - type: cron
+    name: skyroute-orders-pipeline
+    runtime: python
+    branch: main
+    schedule: "0 2 * * *"
+    buildCommand: "pip install -r requirements.txt && pytest -q"
+    startCommand: "python src/pipeline.py"
+    envVars:
+      - fromGroup: skyroute-settings
       - key: SKYROUTE_TRIGGER
         value: "render-cron"
 
