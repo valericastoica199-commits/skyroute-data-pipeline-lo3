@@ -25,7 +25,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 
-PIPELINE_VERSION = "1.1.0"
+PIPELINE_VERSION = "1.2.0"
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "data" / "orders.csv"
@@ -36,7 +36,7 @@ REQUIRED = ["order_id", "order_date", "region", "depot", "carrier", "status",
             "order_value", "items", "weight_kg", "promised_days", "actual_days"]
 VALID_STATUSES = {"Delivered", "In Transit", "Delayed", "Processing"}
 VALID_REGIONS = {"North", "South", "East", "West"}
-DATE_FORMAT = "%Y-%m-%d"
+DATE_FORMAT = "%d/%m/%Y"
 
 # Settings can be changed per platform through environment variables.
 MAX_REJECT_RATE = float(os.getenv("SKYROUTE_MAX_REJECT_RATE", "0.10"))
