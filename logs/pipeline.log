@@ -279,3 +279,14 @@
 2026-11-08 16:34:49,749 | WARNING | run=73162179 | extract | input not found: data\missing.csv (attempt 2/3)
 2026-11-08 16:34:50,751 | WARNING | run=73162179 | extract | input not found: data\missing.csv (attempt 3/3)
 2026-11-08 16:34:50,752 | ERROR   | run=73162179 | extract | input missing: [Errno 2] No such file or directory: 'data\\missing.csv'
+2026-11-08 16:44:46,722 | INFO    | run=bce6e04a | main | pipeline v1.2.1 started (trigger=manual, workers=4)
+2026-11-08 16:44:46,725 | INFO    | run=bce6e04a | extract | read 241 rows from orders.csv (attempt 1)
+2026-11-08 16:44:46,746 | WARNING | run=bce6e04a | validate | rejected SR10018: values out of range (value>=0, items>=1, weight>0, promised>=1)
+2026-11-08 16:44:46,750 | WARNING | run=bce6e04a | validate | rejected SR10043: invalid order_date; expected YYYY-MM-DD
+2026-11-08 16:44:46,751 | WARNING | run=bce6e04a | validate | rejected SR10064: unknown region
+2026-11-08 16:44:46,752 | WARNING | run=bce6e04a | validate | rejected SR10089: order_value/items/weight_kg/promised_days must be numeric
+2026-11-08 16:44:46,757 | WARNING | run=bce6e04a | validate | rejected <blank>: empty order_id
+2026-11-08 16:44:46,758 | WARNING | run=bce6e04a | validate | rejected SR10151: unknown status
+2026-11-08 16:44:46,760 | WARNING | run=bce6e04a | validate | rejected SR10200: order_value/items/weight_kg/promised_days must be numeric
+2026-11-08 16:44:46,764 | WARNING | run=bce6e04a | validate | rejected SR10121: duplicate order_id
+2026-11-08 16:44:46,816 | INFO    | run=bce6e04a | main | completed: input=241 processed=233 rejected=8 duration=88.7ms status=completed_with_rejections
